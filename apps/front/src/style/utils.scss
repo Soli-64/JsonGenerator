@@ -1,0 +1,131 @@
+
+@mixin paddingr($value) {
+    padding-right: $value;
+}
+
+@mixin paddingt($value) {
+    padding-top: $value;
+}
+
+@mixin paddingl($value) {
+    padding-left: $value;
+}
+
+@mixin paddingb($value) {
+    padding-bottom: $value;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.com {
+    width: 100%;
+
+}
+
+.not-visible {
+    display: none;
+}
+
+.plus-btn {
+    width: 2.5vw;
+    height: 3vh;
+    color: #fff;
+    background-color: #a8422e;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.moins-btn {
+    width: 2.5vw;
+    height: 3vh;
+    color: #fff;
+    background-color: #a82e63;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.int-btn {
+    width: 2.5vw;
+    height: 3vh;
+    color: #fff;
+    background-color: #2e61a8;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bolder;
+}
+
+.str-btn {
+    width: 2.5vw;
+    height: 3vh;
+    color: #fff;
+    background-color: #207b61;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bolder;
+}
+
+.selected {
+    border: 2px solid #5bdf6b;
+}
+
+.pl5 {@include paddingl(5vw)}
+.pl10 {@include paddingl(10vw)}
+.pl15 {@include paddingl(15vw)}
+.pl18 {@include paddingl(18vw)}
+.pl20 {@include paddingl(20vw)}
+
+@media screen and (max-width: 1199px) {
+    .int-btn { width: 3vw;}
+    .str-btn { width: 3vw;}
+    .plus-btn { width: 3vw;}
+    .moins-btn { width: 3vw;}
+}
+
+@media screen and (max-width: 999px) {
+    .int-btn { width: 3.5vw;}
+    .str-btn { width: 3.6vw;}
+    .plus-btn { width: 3.5vw;}
+    .moins-btn { width: 3.5vw;}
+}
+
+@media screen and (max-width: 799px) {
+    .int-btn { width: 5vw;}
+    .str-btn { width: 5.1vw;}
+    .plus-btn { width: 5vw;}
+    .moins-btn { width: 5vw;}
+}
+
+@media screen and (max-width: 599px) {
+    .int-btn { width: 7vw;}
+    .str-btn { width: 7.1vw;}
+    .plus-btn { width: 7vw;}
+    .moins-btn { width: 7vw;}
+}
+
+@media screen and (max-width: 399px) {
+    .int-btn { width: 7vw;}
+    .str-btn { width: 7.1vw;}
+    .plus-btn { width: 7vw;}
+    .moins-btn { width: 7vw;}
+    
+.pl5 {@include paddingl(0vw)}
+.pl10 {@include paddingl(0vw)}
+.pl15 {@include paddingl(0vw)}
+.pl18 {@include paddingl(0vw)}
+.pl20 {@include paddingl(0vw)}
+}

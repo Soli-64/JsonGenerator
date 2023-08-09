@@ -1,0 +1,227 @@
+@import '../utils.scss';
+
+.create {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    p {
+        width: 30vw;
+        font-size: 2em;
+        padding-left: 5vw;
+        margin: 0;
+    }
+
+    & input {
+        margin: 3vh 0vw 3vh 0;
+        font-size: 2em;
+        margin-right: 0vw;
+        width: 10vw;
+        background-color: #000;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        &:focus {
+            border: none;
+            outline: 0px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    #suggestions {
+        //display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90vw;
+        height: auto;
+        padding: 8vh 0 10vh 5vw;
+
+        & h1 {
+            padding-left: 5vw;
+            font-size: 3em;
+            width: 95vw;
+        }
+    
+        & p {
+            width: 30vw;
+            font-size: 2em;
+            padding: 0;
+            padding-left: 5vw;
+            margin: 0;
+        }
+    
+        & select {
+            width: 15vw;
+            margin-right: 20vw;
+            font-size: 2em;
+        }
+    
+        & input {
+            margin: 3vh 10vw 3vh 0;
+            font-size: 2em;
+            margin-right: 0vw;
+            width: 15vw;
+        }
+    }
+
+    .generate {
+        &-button {
+            font-size: 2em;
+            width: 10vw;
+            margin: 5vh 10vw;
+            color: #fff;
+            background-color: #5845ff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        &-container {
+            background-color: #000;
+            color: #fff;
+            font-size: 2em;
+            width: 60vw;
+            height: 80vh;
+            margin: 2vh 20vw;
+        }
+    }
+
+}
+
+.copy-button {
+    font-size: 2em;
+    width: 10vw;
+    margin: 5vh 10vw;
+    color: #fff;
+    background-color: #2355cc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+}   
+
+.add-button {
+    font-size: 2em;
+    width: 10vw;
+    margin: 5vh 10vw;
+    color: #fff;
+    background-color: #0a8d61;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+}
+
+.btns-container {
+    width: 40vw;
+    padding: 5vh 0;
+}
+
+.line {
+    width: 65vw;
+    
+}
+
+.sub-line {
+    width: 72.5vw;
+    padding-bottom: 3vh;
+    &-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center
+    }
+    &-btns {
+        padding-left: 30vw;
+        width: auto;
+    }
+}
+
+#elements-adder {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 15vw;
+    font-size: 1.5em;
+    border-bottom: 1px solid #fff;
+    width: 50vw;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 1399px) {
+    .sub-line { 
+        width: 73.5vw;
+        &-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1199px) {
+    .sub-line { width: 76vw;}
+    .btns-container { width: 70vw; }
+    .copy-button {width: 15vw;}
+    .add-button {width: 15vw;}
+    .create .generate-button {width: 15vw;}
+}
+
+@media screen and (max-width: 999px) {
+    .sub-line { width: 78.5vw;}
+    .btns-container { width: 75vw; }
+    .copy-button {width: 20vw;}
+    .add-button {width: 20vw;}
+    .create .generate-button {width: 20vw;}
+}
+
+@media screen and (max-width: 799px) {
+    .sub-line {
+        width: 65.5vw;
+        & div {
+            #modifkey { margin-top: 1vh; }
+            #modifvalue{ @extend #modifkey }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
+    .btns-container { width: 80vw; }
+    .copy-button { width: 25vw; }
+    .add-button { width: 25vw; }
+    .create .generate-button { width: 25vw; }
+
+}
+
+@media screen and (max-width: 599px) {
+    body { font-size: 0.8em; }
+    .sub-line { width: 81vw;}
+    .line { width: 75vw; }
+    .btns-container { width: 75vw; }
+    .copy-button {width: 20vw;}
+    .add-button {width: 20vw;}
+    .create .generate-button {width: 20vw;}
+}
+
+@media screen and (max-width: 399px) {
+    body { font-size: 1em; width: 100%; }
+    #suggestions { width: 90vw; margin: 0; padding: 0;}
+    #elements-adder {width: 90vw;}
+    .sub-line { width: 90vw; padding: 0; margin: 0;}
+    .supress400 {display: none;}
+    .line { width: 79vw; }
+    .btns-container { width: 100vw; font-size: 0.6em; }
+    .copy-button {width: 23vw;}
+    .add-button {width: 23vw;}
+    .create .generate-button {width: 23vw;}
+    .generate-container {
+        height: 30vh;
+    }
+}

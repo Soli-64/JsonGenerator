@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+
+    <header class="">
+
+    </header>
+
+    <div style="width: 100%;height: 15vh;"></div>
+
+    <h1 class="title">Générateur de Json</h1>
+
+    <div class="flex-around choice-container">
+
+      <button id="create-button" class="choice-button choice-create">Créer</button>
+      <button class="choice-button choice-template">Utiliser un modèle</button>
+
+    </div>
+
+    <div class="create">
+
+      <h1>Créer à partir de zéro</h1>
+
+      <div class="flex-around line"> 
+        <p>Clé: </p>
+        <input type="text" id="key">
+      </div>
+
+      <div class="flex-around line">
+        <p>Valeur: </p>
+        <input type="text" id="value">
+      </div>
+        
+
+      <div id="elements-adder">
+        Ajouter une nouvelle suite de clé/valeur
+      </div>
+
+      <div id="suggestions" class="not-visible">
+
+        <div class="flex-between line">
+          <p>Clé initiale</p>
+          <input type="text" id="initkey">
+        </div>
+
+        <div class="flex-between pl5 sub-line">
+          <p>Modification <span class="supress400"> appliquée:</span></p>
+          <div class="sub-line-content">
+            <input type="text" id="modifkey">
+            <div style="display: flex;flex-direction: row;">
+              <button name="int" class="int-btn modif1">Int</button>
+              <button name="str" class="str-btn modif1">Str</button>
+              <button name="add" class="plus-btn op1">+</button>
+              <button name="soustract" class="moins-btn op1">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class=" flex-between line">
+          <p>Valeur initiale</p>
+          <input type="text" id="initvalue">
+        </div>
+        
+
+        <div class="flex-between pl5 sub-line">
+          <p>Modification <span class="supress400"> appliquée:</span></p>
+          <div class="sub-line-content">
+            <input type="text" id="modifvalue">
+            <div style="display: flex;flex-direction: row;">
+              <button name="int" class="int-btn modif2">Int</button>
+              <button name="str" class="str-btn modif2">Str</button>
+              <button name="add" class="plus-btn op2">+</button>
+              <button name="soustract" class="moins-btn op2">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-between line">
+          <p>Nombre <span class="supress400"> de combo</span> Clé/valeur:</p>
+          <input type="text" id="line-number">
+        </div>
+
+      </div>
+        
+      <div class="flex-around btns-container">
+        <button id="generate-button" class="generate-button">Générer</button>
+        <button id="add-button" class="add-button">Ajouter</button>
+        <button id="copy-button" class="copy-button">Copier</button>
+      </div>
+      
+      <textarea name="generate-json" class="generate-container" cols="100" rows="50">
+      </textarea>
+
+    </div>
+
+
+  </body>
+</html>

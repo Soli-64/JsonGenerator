@@ -1,0 +1,72 @@
+.title {
+    font-size: 6em;
+    padding-left: 25vw;
+}
+
+.choice {
+
+    &-container {
+        width: 100%;
+        height: 50vh;
+    }
+
+    &-button {
+        width: 18vw;
+        height: 10vh;
+        font-size: 2em;
+        border-radius: 15px;
+
+        &:hover {
+            background: linear-gradient(to right, black, white, black);
+        }
+    }
+
+    &-create {
+        
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .title { padding-left: 15vw; }
+}
+
+@media screen and (max-width: 1199px) {
+    .title { padding-left: 9vw; }
+}
+
+@media screen and (max-width: 999px) {
+    .title { 
+        width: 60vw;
+        height: auto;
+        padding-left: 25vw;
+        text-align: center;
+    }
+    .choice { &-button { width: 25vw;}}
+}
+
+@media screen and (max-width: 799px) {
+    .title { width:90vw; padding-left: 7vw; text-align: center; }
+    .choice { 
+        &-container {
+            display: flex;
+            flex-direction: column;
+            height: 30vh;    
+        }
+        &-button { width: 55vw; height: 8vh;}
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .title { width:90vw; padding-left: 3vw; text-align: center;font-size: 3em; }
+    .choice { 
+        &-container {
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30vh;    
+            width: 100vw;
+        }
+        &-button { width: 75vw; height: 8vh;}
+    }
+}
